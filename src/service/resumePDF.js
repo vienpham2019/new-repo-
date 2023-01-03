@@ -1,16 +1,26 @@
 import jsPDF from "jspdf";
 import portfolioState from "../service/state/portfolioState";
 
-let x = 15;
+let x;
 let text;
-let full_x = 0;
-let resume_h = 25;
-let space = 4; // space between section
-let lMargin = 15; //left margin in mm
-let rMargin = 15; //right margin in mm
-let pdfInMM = 210; // width of A4 in mm
+let full_x;
+let resume_h;
+let space; // space between section
+let lMargin; //left margin in mm
+let rMargin; //right margin in mm
+let pdfInMM; // width of A4 in mm
 
 let secondaryColor = [31, 93, 187];
+
+const init = () => {
+   x = 15;
+ full_x = 0;
+ resume_h = 25;
+ space = 4; // space between section
+ lMargin = 15; //left margin in mm
+ rMargin = 15; //right margin in mm
+ pdfInMM = 210; // width of A4 in mm
+}
 
 let {
   phone,
@@ -24,6 +34,7 @@ let {
 } = portfolioState;
 
 const downloadResume = () => {
+  init(); 
   let doc = new jsPDF({ lineHeight: 1.5 });
   full_x = doc.internal.pageSize.getWidth() - x;
   pdfInMM = full_x;
@@ -96,6 +107,27 @@ const downloadResume = () => {
 
   resume_h += doc.getTextDimensions(skill_lines).h + space;
 
+    // Work Experience
+    resume_h = resume_header(doc, "WORK EXPERIENCE", x, resume_h);
+
+    experienceLists.forEach((work) => {
+      let { title, date, location, company, jobDetails } = work;
+      doc.setFont(undefined, "bold");
+      doc.setFontSize("10");
+      doc.text(title, x, resume_h);
+      let work_experience_title_dimentions = doc.getTextDimensions(title);
+      doc.setFont(undefined, "normal");
+      doc.text(`, ${location}`, x + work_experience_title_dimentions.w, resume_h);
+      doc.text(date, full_x - doc.getTextWidth(date), resume_h);
+  
+      resume_h += work_experience_title_dimentions.h + 2;
+  
+      doc.text(company, x, resume_h);
+      resume_h += doc.getTextDimensions(company).h + 2;
+  
+      resume_h = resume_list(doc, jobDetails, x, resume_h) + 2;
+    });
+
   // Technical Project
   resume_h = resume_header(doc, "TECHNICAL PROJECTS", x, resume_h);
 
@@ -140,26 +172,7 @@ const downloadResume = () => {
     resume_h = resume_list(doc, projectDetails, x, resume_h) + 2;
   });
 
-  // Work Experience
-  resume_h = resume_header(doc, "WORK EXPERIENCE", x, resume_h);
 
-  experienceLists.forEach((work) => {
-    let { title, date, location, company, jobDetails } = work;
-    doc.setFont(undefined, "bold");
-    doc.setFontSize("10");
-    doc.text(title, x, resume_h);
-    let work_experience_title_dimentions = doc.getTextDimensions(title);
-    doc.setFont(undefined, "normal");
-    doc.text(`, ${location}`, x + work_experience_title_dimentions.w, resume_h);
-    doc.text(date, full_x - doc.getTextWidth(date), resume_h);
-
-    resume_h += work_experience_title_dimentions.h + 2;
-
-    doc.text(company, x, resume_h);
-    resume_h += doc.getTextDimensions(company).h + 2;
-
-    resume_h = resume_list(doc, jobDetails, x, resume_h) + 2;
-  });
 
   // Education
   resume_h = resume_header(doc, "EDUCATION", x, resume_h);

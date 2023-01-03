@@ -30,7 +30,7 @@ import portfolioDetail4_3 from "../../images/portfolio/portfolio-4/portfolioDeta
 const portfolioInitState = {
   name: "Vien Pham",
   aboutMe:
-    "I'am a Full Stack Web Developer with a passion for learning new languages and technologies. Having arrived in the United States from Vietnam seven years ago, I have an understanding of different cultures and can easily adapt to any work environment. Not only do I thrive in helping others and being a part of a team, but I have strong problem-solving skills, meet deadlines and am able to deliver quality products for clients.",
+    "Web Developer with a passion for learning new languages and technologies. My experience lies in building strong relationships and resolving critical work challenges. Throughout my career, I’ve earned a reputation as someone my manager and peers can depend on. I have a strong work ethic and am a trustworthy employee. Beyond this, I excel at pinpointing customer needs, implementing effective business solutions, and ensuring outstanding customer service.",
   email: "vienpham2019@gmail.com",
   phone: "(502) 296 0606",
   location: "Houston, TX",
