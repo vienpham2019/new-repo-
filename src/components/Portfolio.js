@@ -19,6 +19,7 @@ function Portfolio() {
         {projects.map((project, index) => (
           <div
             className="col-lg-4 col-md-6 portfolio-item filter-app"
+            style={{ height: "4rem" }}
             id={index}
             onClick={() => {
               document.querySelector("body").style.overflow = "hidden";

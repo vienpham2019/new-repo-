@@ -5,7 +5,6 @@ import portfolioDetail1_2 from "../../images/portfolio/portfolio-1/portfolioDeta
 import portfolioDetail1_3 from "../../images/portfolio/portfolio-1/portfolioDetail3.png";
 import portfolioDetail1_4 from "../../images/portfolio/portfolio-1/portfolioDetail4.png";
 import portfolioDetail1_5 from "../../images/portfolio/portfolio-1/portfolioDetail5.png";
-
 // =========== project 2 ================
 import projectBannerImage_2 from "../../images/portfolio/portfolio-2/portfolioBanner.png";
 import portfolioDetail2_1 from "../../images/portfolio/portfolio-2/portfolioDetail1.png";
@@ -21,16 +20,10 @@ import portfolioDetail3_2 from "../../images/portfolio/portfolio-3/portfolioDeta
 import portfolioDetail3_3 from "../../images/portfolio/portfolio-3/portfolioDetail3.png";
 import portfolioDetail3_4 from "../../images/portfolio/portfolio-3/portfolioDetail4.png";
 
-// =========== project 4 ================
-import projectBannerImage_4 from "../../images/portfolio/portfolio-4/portfolioBanner.png";
-import portfolioDetail4_1 from "../../images/portfolio/portfolio-4/portfolioDetail1.png";
-import portfolioDetail4_2 from "../../images/portfolio/portfolio-4/portfolioDetail2.png";
-import portfolioDetail4_3 from "../../images/portfolio/portfolio-4/portfolioDetail3.png";
-
 const portfolioInitState = {
   name: "Vien Pham",
   aboutMe:
-    "Web Developer with a passion for learning new languages and technologies. My experience lies in building strong relationships and resolving critical work challenges. Throughout my career, I’ve earned a reputation as someone my manager and peers can depend on. I have a strong work ethic and am a trustworthy employee. Beyond this, I excel at pinpointing customer needs, implementing effective business solutions, and ensuring outstanding customer service.",
+    "I am a Web Developer with a passion for learning new languages and technologies. My experience includes building strong relationships and resolving critical work challenges. Throughout my career, I have earned a reputation as a dependable colleague among my managers and peers. I am known for my strong work ethic and trustworthiness. Additionally, I excel at identifying customer needs, implementing effective business solutions, and delivering outstanding customer service.",
   email: "vienpham2019@gmail.com",
   phone: "(502) 296 0606",
   location: "Houston, TX",
@@ -44,18 +37,13 @@ const portfolioInitState = {
     ["fab fa-github", "GitHub", "https://github.com/vienpham2019"],
   ],
   skills: [
-    "Ruby on Rails",
-    "Java",
-    "Python",
     "JavaScript",
-    "AngularJS",
-    "RxJS",
     "TypeScript",
     "ReactJS",
     "React Hooks",
     "Redux",
     "NodeJS",
-    "Spring",
+    "Express",
     "HTML",
     "CSS3+",
     "RESTful API",
@@ -63,7 +51,6 @@ const portfolioInitState = {
     "Bootstrap",
     "MySQL",
     "Semantic UI",
-    "Express",
     "MongoDB",
     "GitHub",
   ],
@@ -99,29 +86,34 @@ const portfolioInitState = {
   ],
   projects: [
     {
-      title: "vShop.",
-      about: "An activewear/accessories e-commerce site for men and women.",
-      projectDate: "01 March, 2020",
+      title: "Vmovie",
+      about:
+        "Allows users to book movie tickets, order food and drinks, and have admin access for managing various aspects of the system.",
+      projectDate: "06 August, 2024",
       tools: {
-        "Front-end": "Angular - NgRx - HTML - CSS - Bootstrap",
-        "Back-end": "NodeJS - Express - MongoDB - Heroku",
+        "Front-end": "ReactJS - Redux - HTML - CSS - Tailwind",
+        "Back-end": "NodeJS - Express - MongoDB",
       },
       projectDetails: [
-        "Built client-side with Angular/NgRx.",
-        "Utilized NodeJS with API endpoints for Fetch requests and MongoDB for data persistence.",
-        "Styled frontend with Bootstrap and custom CSS.",
-        "Deployed application on Heroku.",
+        "Utilized React and Redux for the frontend.",
+        "Implemented the backend with Node.js and Express using the MVC pattern and designed APIs to handle fetch requests.",
+        "Designed the frontend using Tailwind CSS.",
       ],
       projectLinks: [
         {
           icon: "fas fa-globe-americas",
           title: "Project_Demo",
-          link: "https://v--shop.herokuapp.com/",
+          link: "https://vmovie-client.onrender.com",
         },
         {
           icon: "fab fa-github",
-          title: "GitHub",
-          link: "https://v--shop.herokuapp.com/",
+          title: "Front-end",
+          link: "https://github.com/vienpham2019/Vmovie_client",
+        },
+        {
+          icon: "fab fa-github",
+          title: "Back-end",
+          link: "https://github.com/vienpham2019/Vmovie_api",
         },
       ],
       projectImages: [
@@ -136,27 +128,32 @@ const portfolioInitState = {
     {
       title: "The Movies",
       about:
-        "Create a favorite movie list, write reviews and share movie collections.",
+        "allows users to create a favorite movie list, write reviews, and share their movie collections.",
       projectDate: "01 March, 2020",
       tools: {
         "Front-end": "ReactJS - Redux - HTML - CSS - Bootstrap",
-        "Back-end": "Ruby on rails - Socket.io",
+        "Back-end": "NodeJS - Express - MongoDB",
       },
       projectDetails: [
         "Utilized React/Redux for frontend.",
-        "Used Ruby-on-Rails to design the backend with the MVC pattern and API for responding to fetch requests.",
+        "Used NodeJS and Express to design the backend with the MVC pattern and API for responding to fetch requests.",
         "Designed the frontend with Bootstrap and custom CSS.",
       ],
       projectLinks: [
         {
           icon: "fas fa-globe-americas",
           title: "Project_Demo",
-          link: "https://the-movies-f6ace.web.app/",
+          link: "https://the-movies-client.onrender.com",
         },
         {
           icon: "fab fa-github",
-          title: "GitHub",
-          link: "https://github.com/vienpham2019/The_Movies",
+          title: "Front-end",
+          link: "https://github.com/vienpham2019/The_movies_client",
+        },
+        {
+          icon: "fab fa-github",
+          title: "Back-end",
+          link: "https://github.com/vienpham2019/The_movies_api",
         },
       ],
       projectImages: [
@@ -200,40 +197,6 @@ const portfolioInitState = {
         portfolioDetail3_4,
       ],
       projectBannerImage: projectBannerImage_3,
-    },
-    {
-      title: "Vintage Village",
-      about:
-        "Vintage Village will exceed your expectations in every way. A serene setting where you can enjoy nature and relish luxury and comfort. And where there’s always something new to enjoy. A place where we’ll indulge your every wish and help you rediscover the simple things in life.",
-      projectDate: "01 March, 2020",
-      tools: {
-        "Front-end": "ReactJS - Redux - HTML - CSS - Bootstrap",
-        "Back-end": "NodeJS - Express - MongoDB - Heroku",
-      },
-      projectDetails: [
-        "Utilized React/Redux for front-end.",
-        "Deploy application on Heroku.",
-        "Designed the frontend with Bootstrap and custom CSS.",
-        "Used NodeJS for back-end and MongoDB for database.",
-      ],
-      projectLinks: [
-        {
-          icon: "fas fa-globe-americas",
-          title: "Project_Demo",
-          link: "https://beackresortsdemo.herokuapp.com/",
-        },
-        {
-          icon: "fab fa-github",
-          title: "GitHub",
-          link: "https://github.com/vienpham2019/beachResort",
-        },
-      ],
-      projectImages: [
-        portfolioDetail4_1,
-        portfolioDetail4_2,
-        portfolioDetail4_3,
-      ],
-      projectBannerImage: projectBannerImage_4,
     },
   ],
 };

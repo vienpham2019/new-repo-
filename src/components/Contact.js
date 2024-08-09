@@ -15,7 +15,9 @@ function Contact() {
     e.preventDefault();
     setContactLoad(true);
     let email = e.target[1].value;
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const isValidEmail = emailPattern.test(email);
+    if (isValidEmail) {
       emailjs
         .sendForm(
           "service_sfz7aek",

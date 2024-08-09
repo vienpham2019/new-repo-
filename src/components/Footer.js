@@ -14,7 +14,7 @@ function Footer() {
 
       <div className="social-links">
         {links.map((l) => (
-          <a href={l[2]} className="mx-2" target="_blank">
+          <a href={l[2]} className="mx-2" target="_blank" rel="noreferrer">
             <i className={l[0]}></i>
           </a>
         ))}

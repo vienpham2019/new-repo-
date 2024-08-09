@@ -87,7 +87,7 @@ function PortfolioModal() {
                     </li>
                     {projectLinks.map((l) => (
                       <li className="portfolio-info-link">
-                        <a href={l.link} target="_blank">
+                        <a href={l.link} target="_blank" rel="noreferrer">
                           <i className={l.icon}></i>
                           <strong>{l.title}</strong>
                         </a>

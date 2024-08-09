@@ -1,7 +1,6 @@
 import aboutMeImage from ".././images/about-me.png";
 import { useSelector } from "react-redux";
-import downloadResume from "../service/resumePDF";
-
+import resumeFile from "../images/Vienpham_Resume.pdf";
 function About() {
   let { skills, aboutMe, links, phone, email, location } = useSelector(
     (state) => state.portfolioReducer
@@ -35,7 +34,7 @@ function About() {
                   <i className="bi bi-chevron-right"></i>
                   <strong>Website:</strong>
                   <span>
-                    <a href={links[0][2]} target="_blank">
+                    <a href={links[0][2]} target="_blank" rel="noreferrer">
                       LinkedIn Profile
                     </a>
                   </span>
@@ -60,13 +59,15 @@ function About() {
               </ul>
             </div>
           </div>
-          <button
+          <a
+            href={resumeFile}
+            download="Vienpham_Resume"
             className="download-resume-button"
-            onClick={() => downloadResume()}
+            // onClick={() => downloadResume()}
           >
             {" "}
             <i className="fas fa-download"></i> Download Resume
-          </button>
+          </a>
           {/* <!-- =========== Skill Section =============--> */}
           <div className="container mt-4" data-aos="fade-up">
             <p>Here are a few technologies I've been working with recenly: </p>
