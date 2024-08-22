@@ -1,6 +1,6 @@
 import aboutMeImage from ".././images/about-me.png";
 import { useSelector } from "react-redux";
-import resumeFile from "../images/Vienpham_Resume.pdf";
+import resumeFile from "../images/Vien-Pham-Resume.pdf";
 function About() {
   let { skills, aboutMe, links, phone, email, location } = useSelector(
     (state) => state.portfolioReducer

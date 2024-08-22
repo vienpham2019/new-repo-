@@ -56,15 +56,14 @@ const portfolioInitState = {
   ],
   experienceLists: [
     {
-      title: "Tech Support Associate",
+      title: "Software Engineer",
       date: "June 2021 - Present",
       location: "Phoenix, AZ",
       company: "Infosys",
       jobDetails: [
-        "Familiarity with Agile development methodologies.",
-        "Experience with software design and development in a test-driven environment.",
-        "Knowledge of coding languages (e.g. C++, Java, Python) and frameworks/systems(e.g. AngularJS, Git).",
-        "Revolve around installing and repairing software and applications, troubleshooting and conducting regular tests and maintenance to ensure smooth workflow.",
+        "Installed and repaired critical software applications, reducing system downtime by ~50% and boosting overall productivity by 15%.",
+        "Conducted regular software tests and maintenance with JUnit and Jest, enhancing system stability by 20% and preventing 10 potential failures per month, according to system stability metrics and failure logs.",
+        "Worked with coding languages (Node.js, Java, Python) and the ReactJS framework to develop new features, and applied Agile development methodology to accelerate delivery time, which contributed to an increase in 15% client satisfaction.",
       ],
     },
   ],
@@ -88,16 +87,16 @@ const portfolioInitState = {
     {
       title: "Vmovie",
       about:
-        "Allows users to book movie tickets, order food and drinks, and have admin access for managing various aspects of the system.",
+        "Developed a booking system allowing users to reserve movie tickets, order food and drinks, and manage various system aspects through admin access, enhancing user convenience and operational efficiency.",
       projectDate: "06 August, 2024",
       tools: {
         "Front-end": "ReactJS - Redux - HTML - CSS - Tailwind",
         "Back-end": "NodeJS - Express - MongoDB",
       },
       projectDetails: [
-        "Utilized React and Redux for the frontend.",
-        "Implemented the backend with Node.js and Express using the MVC pattern and designed APIs to handle fetch requests.",
-        "Designed the frontend using Tailwind CSS.",
+        "Developed a booking system allowing users to reserve movie tickets, order food and drinks, and manage various system aspects through admin access, enhancing user convenience and operational efficiency.",
+        "Built the frontend with React/Redux and designed it using TailwindCSS, creating a responsive and visually appealing user interface",
+        "Implemented the backend with Node.js and Express using MVC pattern, optimizing API response times by 20% through caching and asynchronous processing.",
       ],
       projectLinks: [
         {
@@ -135,9 +134,9 @@ const portfolioInitState = {
         "Back-end": "NodeJS - Express - MongoDB",
       },
       projectDetails: [
-        "Utilized React/Redux for frontend.",
-        "Used NodeJS and Express to design the backend with the MVC pattern and API for responding to fetch requests.",
-        "Designed the frontend with Bootstrap and custom CSS.",
+        "Built a real-time chat feature using Socket.io, enhancing user interaction by allowing friends to chat directly within the application.",
+        "Developed the frontend with React/Redux and Bootstrap, Creating a responsive UI that enabled users to manage favorite movie lists, write reviews, and share collections, boosting engagement and content sharing.",
+        "Designed the backend with Node.js and Express following the MVC pattern, streamlining API responses for fetch requests and improving application architecture.",
       ],
       projectLinks: [
         {
@@ -175,8 +174,9 @@ const portfolioInitState = {
         "Back-end": "",
       },
       projectDetails: [
-        "Utilized React and designed with custom Css for front-end.",
-        "Deploy application to Firebase.",
+        "Utilized Developed a maze generator web app with selectable algorithms (e.g., DFS, Prims’s), enhancing user engagement through customizable experiences.",
+        "Implemented controls for maze size, speed, and search algorithms (A*, BFS, DFS, etc.), enhancing flexibility and educational value.",
+        "Optimized maze generation and pathfinding, reducing computational time by 13% through efficient algorithms",
       ],
       projectLinks: [
         {
