@@ -56,7 +56,7 @@ const portfolioInitState = {
   ],
   experienceLists: [
     {
-      title: "Software Engineer",
+      title: "Production Support Associate",
       date: "June 2021 - Present",
       location: "Phoenix, AZ",
       company: "Infosys",
